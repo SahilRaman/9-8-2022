@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://code.jquery.com/ui/jquery-ui-git.css" rel="stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/jquery-git.js"></script>
+    <script src="https://code.jquery.com/ui/jquery-ui-git.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Initialize the accordion and specify the event option.</title>
+    <style>
+        h2 {
+
+            text-shadow: 1px 1px 2px rgb(150, 147, 147), 0 0 25px rgb(114, 117, 116), 0 0 5px rgb(158, 158, 163);
+            text-transform: uppercase;
+            text-align: justify;
+            color: whitesmoke;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            margin: 85px;
+            
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: whitesmoke;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .desc {
+            padding: 15px;
+            text-align: center;
+        }
+    </style>
+</head>
+<script type="text/javascript">
+    $(Document).ready(
+
+        function () {
+            $("#divid").accordion({
+                event: "mouseover"
+            });
+            var event = $("#divid").accordion("option", "event");
+
+            $("#divid").accordion("option", "event", "mouseover");
+        });
+</script>
+
+<body>
+
+    <div id="divid" >
+        <h2 >
+          <center><b>Name </center></b>
+        </h2>
+        <div>
+            <center><b>Sahil</center></b>
+        </div>
+        <h2>
+            <center><b>Surename</center></b>
+        </h2>
+        <div>
+            <center><b>Ramani</center></b>
+        </div>
+        <h2>
+            <center><b> Contect</center></b>
+        </h2>
+        <div>
+            <center><b>ramani1689 </center></b>
+        </div>
+    </div>
+
+    <div >
+        <center>
+
+        
+        <div class="dropdown">
+            <img src="images.jfif" alt="men" width="100" height="50">
+            <div class="dropdown-content">
+                <img src="images.jfif" alt="men" width="300" height="200">
+                <div class="desc">nice picture</div>
+                </center>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
